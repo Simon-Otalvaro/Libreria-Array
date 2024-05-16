@@ -1,19 +1,51 @@
-class Libro {
-    constructor(titulo, autor, genero, idioma, precio, formato, isbn, descripcion, estado, ubicacion, fecha_publicacion, editorial, paginas, dimensiones, peso) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.genero = genero;
-        this.idioma = idioma;
-        this.precio = precio;
-        this.formato = formato;
-        this.isbn = isbn;
-        this.descripcion = descripcion;
-        this.estado = estado;
-        this.ubicacion = ubicacion;
-        this.fecha_publicacion = fecha_publicacion;
-        this.editorial = editorial;
-        this.paginas = paginas;
-        this.dimensiones = dimensiones;
-        this.peso = peso;
-    }
-}
+let Libro = [
+    //constructor(titulo, autor, genero, idioma, precio, formato, isbn, descripcion, estado, ubicacion, fecha_publicacion, editorial, paginas, dimensiones, peso) 
+       { titulo:titulo,
+        autor: autor,
+        genero: genero,
+        idioma: idioma,
+        precio: precio,
+        formato: formato,
+        isbn: isbn,
+        descripcion: descripcion,
+        estado: estado,
+        ubicacion: ubicacion,
+        fecha_publicacion: fecha_publicacion,
+        editorial: editorial,
+        paginas: paginas,
+        dimensiones: dimensiones,
+        peso : peso,
+       },
+       { titulo:titulo,
+        autor: autor,
+        genero: genero,
+        idioma: idioma,
+        precio: precio,
+        formato: formato,
+        isbn: isbn,
+        descripcion: descripcion,
+        estado: estado,
+        ubicacion: ubicacion,
+        fecha_publicacion: fecha_publicacion,
+        editorial: editorial,
+        paginas: paginas,
+        dimensiones: dimensiones,
+        peso : peso,
+       },
+       { titulo:titulo,
+        autor: autor,
+        genero: genero,
+        idioma: idioma,
+        precio: precio,
+        formato: formato,
+        isbn: isbn,
+        descripcion: descripcion,
+        estado: estado,
+        ubicacion: ubicacion,
+        fecha_publicacion: fecha_publicacion,
+        editorial: editorial,
+        paginas: paginas,
+        dimensiones: dimensiones,
+        peso : peso,
+       },
+    ]
