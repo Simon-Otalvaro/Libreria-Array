@@ -1,4 +1,4 @@
-let Libro = [
+let libros = [
     //constructor(titulo, autor, genero, idioma, precio, formato, isbn, descripcion, estado, ubicacion, fecha_publicacion, editorial, paginas, dimensiones, peso) 
     //Libro #1) 
        { titulo:"Satanás",
@@ -342,343 +342,49 @@ let Libro = [
        },
     ]
 
-    function agregarLibro() {
-      let libros = {};
-  
-      Libro.titulo = prompt("Ingresa el título del libro:");
-      Libro.autor = prompt("Ingresa el autor del libro:");
-      Libro.genero = prompt("Ingresa el género del libro:");
-      Libro.idioma = prompt("Ingresa el idioma del libro:");
-      Libro.precio = prompt("Ingresa el precio del libro:");
-      Libro.formato = prompt("Ingresa el formato del libro:");
-      Libro.ISBN = prompt("Ingresa el ISBN del libro:");
-      Libro.descripcion = prompt("Ingresa la descripción del libro:");
-      Libro.estado = prompt("Ingresa el estado del libro:");
-      Libro.ubicacion = prompt("Ingresa la ubicación del libro:");
-      Libro.fechaPublicacion = prompt("Ingresa la fecha de publicación del libro:");
-      Libro.editorial = prompt("Ingresa la editorial del libro:");
-      Libro.paginas = prompt("Ingresa el número de páginas del libro:");
-      Libro.dimensiones = {
-          alto: prompt("Ingresa el alto del libro:"),
-          ancho: prompt("Ingresa el ancho del libro:"),
-          grueso: prompt("Ingresa el grueso del libro:")
-      };
-      Libro.peso = prompt("Ingresa el peso del libro:");
-  
-      Libro.push(libros);
-      console.log(Libro)
-  }
-  
-  
-  
-  function eliminarLibroNombre() {
-      let titulo = prompt("Ingresa el título del libro que deseas eliminar:");
-  
-      for(let i = 0; i < Libro.length; i++) {
-          if(Libro[i].titulo === titulo) {
-              libro.splice(i, 1);
-              console.log("Libro eliminado exitosamente.");
-              return;
-          }
-          console.log(Libro);
-      }
-  
-      console.log("No se encontró un libro con ese título.");
-  }
-  
-  
-  function eliminarUltimoLibro() {
-      if(Libro.length > 0) {
-          Libro.pop();
-          console.log("Último libro eliminado exitosamente.");
-      } else {
-          console.log("No hay libros en la lista para eliminar.");
-      }
-      console.log(Libro);
-  }
-  
-  function mostrarLibros() {
-      if(Libro.length > 0) {
-          for(let i = 0; i < Libro.length; i++) {
-              console.log(`Libro ${i+1}:`);
-              console.log(`Título: ${Libro[i].titulo}`);
-              console.log(`Autor: ${Libro[i].autor}`);
-              console.log(`Género: ${Libro[i].genero}`);
-              console.log(`Idioma: ${Libro[i].idioma}`);
-              console.log(`Precio: ${Libro[i].precio}`);
-              console.log(`Formato: ${Libro[i].formato}`);
-              console.log(`ISBN: ${Libro[i].ISBN}`);
-              console.log(`Descripción: ${Libro[i].descripcion}`);
-              console.log(`Estado: ${Libro[i].estado}`);
-              console.log(`Ubicación: ${Libro[i].ubicacion}`);
-              console.log(`Fecha de publicación: ${Libro[i].fechaPublicacion}`);
-              console.log(`Editorial: ${Libro[i].editorial}`);
-              console.log(`Páginas: ${Libro[i].paginas}`);
-              console.log(`Dimensiones: Alto - ${Libro[i].dimensiones.alto}, Ancho - ${Libro[i].dimensiones.ancho}, Grueso - ${Libro[i].dimensiones.grueso}`);
-              console.log(`Peso: ${Libro[i].peso}`);
-              console.log("\n");
-          }
-      } else {
-          console.log("No hay libros en la lista para mostrar.");
-      }
-  }
-  
-  
-  
-  
-  const NUEVAARRAY = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          autor: libros.autor,
-          editorial: libros.editorial,
-          precio: libros.precio,
-      }
-  })
-  
-  const LISTACASTIGO1 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          genero: libros.genero,
-          ISBN: libros.ISBN,
-          idioma: libros.idioma,
-      }
-  })
-  
-  const LISTACASTIGO2 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          formato: libros.formato,
-          descripcion: libros.descripcion,
-          idioma: libros.idioma,
-      }
-  })
-  
-  const LISTACASTIGO3 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          precio: libros.precio,
-          ISBN: libros.ISBN,
-          idioma: libros.idioma,
-      }
-  })
-  
-  const LISTACASTIGO4 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          formato: libros.formato,
-          fechaPublicacion: libros.fechaPublicacion,
-          autor: libros.autor
-      }
-  })
-  
-  const LISTACASTIGO5 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          genero: libros.genero,
-          autor: libros.autor,
-          idioma: libros.idioma,
-      }
-  })
-  
-  const LISTACASTIGO6 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          ubicacion: libros.ubicacion,
-          estado: libros.estado,
-          formato: libros.formato,
-      }
-  })
-  
-  const LISTACASTIGO7 = Libro.map((libros) => {
-      return{
-          titulo : libros.titulo,
-          precio: libros.precio,
-          estado: libros.estado,
-          autor: libros.autor,
-      }
-  })
-  
-  const LISTACASTIGO8 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          fechaPublicacion: libros.fechaPublicacion,
-          dimensiones: libros.dimensiones,
-          formato: libros.formato,
-      }
-  })
-  
-  const LISTACASTIGO9 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          genero: libros.genero,
-          dimensiones: libros.ISBN,
-          estado: libros.estado,
-      }
-  })
-  
-  const LISTACASTIGO10 = Libro.map((libros) => {
-      return{
-          titulo: libros.titulo,
-          genero: libros.genero,
-          genero: libros.genero,
-          idioma: libros.idioma,
-      }
-  })
-  
-  let descuentoLibros = Libro.map((libros) =>{
-      return{
-          ...libros,
-          descuento: 20,
-      };
-  })
-  
-  let nuevoResumen = Libro.map((libros) => {
-      return{
-          ...libros,
-          descuento: 20,
-          titulo: libros.titulo,
-          autor: libros.autor,
-          editorial: libros.editorial,
-          precio: libros.precio
+    
+    function buscarLibroPorTitulo() {
+        let nombreLibro = prompt("Inserta el título del libro:");
+        let libroBuscado = libros.find(libro => libro.titulo === nombreLibro);
+        if (libroBuscado) {
+            console.log("Se encontró el libro:", libroBuscado);
+        } else {
+            console.log("El libro no se encontró en la lista.");
+        }
+    }
+
+   
+    
+    
+    let msj = "BIENVENIDOS AL MENÚ DE BIBLIOTECA\n\n";
+    msj += "1. Buscar un objeto del array por título.\n";
+    msj += "2. Buscar un objeto del array por autor.\n";
+    msj += "3. Buscar un objeto del array por fecha de publicación.\n";
+    msj += "4. Buscar un objeto del array por género.\n";  
+    msj += "5. Buscar un objeto del array por idioma.\n"; 
+    msj += "6. Salir.\n"; 
+    
+    let codigo = parseInt(prompt(msj));
+    
+    switch (codigo) {
+        case 1:
+            buscarLibroPorTitulo();
+            break;
+        case 2:
+        
+            break;
+        case 3:
           
-      }
-  })
-  
-  const LibrosCaros = Libro.filter((libros) => {
-      return libros.precio > 50000
-      
-  })
-  
-  const libroResumen = Libro
-  .sort((a, b) => b.paginas - a.paginas)
-  .map((libros) =>{
-      return {
-          titulo: libros.titulo,
-          autor: libros.autor,
-          editorial: libros.editorial,
-          paginas: libros.paginas,
-      }
-  })
-  
-  const ordenLibros = Libro.sort((a, b) => b.paginas - a.paginas)
-  
-  const libroResumenCaro = Libro
-  .filter((libros) => {
-      return libros.precio > 50000
-  })
-  .map((libros) =>{
-      return {
-          titulo: libros.titulo,
-          autor: libros.autor,
-          precio: libros.precio,
-      }
-  })
-  
-  const libroResumenPaginas = Libro
-  .filter((libros) => {
-      return libros.paginas < 100
-  })
-  .map((libros) =>{
-      return {
-          titulo: libros.titulo,
-          autor: libros.autor,
-          editorial: libros.editorial,
-          paginas: libros.paginas,
-      }
-  })
-  
-  const libroCaroResumen = Libro
-  .filter((libros) => {
-      return libros.precio > 15000
-  })
-  .sort((a, b) => b.precio - a.precio)
-  .map((libros) =>{
-      return {
-          titulo: libros.titulo,
-          autor: libros.autor,
-          precio: libros.precio,
-      }
-  })
-  
-  const libroResumenPaginasMayor = Libro
-  .sort((a, b) => b.paginas - a.paginas)
-  .map((libros) =>{
-      return {
-          titulo: libros.titulo,
-          autor: libros.autor,
-          editorial: libros.editorial,
-          paginas: libros.paginas,
-      }
-  })
-  
-  let msj
-  msj = "opciones de edición para los libros\n\n";
-  msj += "1. Agregar libro\n";
-  msj += "2. Eliminar un libro por su nombre\n";
-  msj += "3. Eliminar el último libro agregado\n"
-  msj += "4. Mostrar lista de libros\n"
-  msj += "5. Resumen \n"
-  msj += "6. Castigo \n"
-  msj += "7. Descuento \n"
-  msj += "8. Filter \n"
-  msj += "9. Resumen ordenado \n"
-  msj += "10. Ordenado por paginas\n"
-  msj += "11. Resumen ordenado por mas caro\n"
-  msj += "12. Resumen ordenado por paginas menores a 100\n"
-  msj += "13. Resumen ordenado por mas caro de mayor a menor\n"
-  msj += "13. Resumen ordenado por paginas de mayor a menor\n"
-  msj += "Ingrese el código de la acción que quiere realizar siendo entre 1 y "
-  let codigo = parseInt(prompt(msj));
-  switch (codigo) {
-      case 1:
-          agregarLibro();
-          break;
-      case 2:
-          eliminarLibroNombre();
-          break;
-      case 3:
-          eliminarUltimoLibro();
-          break;
-      case 4:
-          mostrarLibros();
-          break;
-      case 5:
-          console.table(NUEVAARRAY);
-          break;
-      case 6:
-          console.table(LISTACASTIGO1);
-          console.table(LISTACASTIGO2); 
-          console.table(LISTACASTIGO3);
-          console.table( LISTACASTIGO4); 
-          console.table(LISTACASTIGO6); 
-          console.table(LISTACASTIGO8);
-          console.table(LISTACASTIGO9); 
-          console.table(LISTACASTIGO10);
-          break;
-      case 7:
-          console.table(descuentoLibros);
-          break;
-      case 8:
-          console.log(LibrosCaros);
-      break;
-      case 9:
-          console.table(libroResumen);
-      break;
-      case 10:
-          console.log(ordenLibros);
-      break;
-      case 11:
-          console.table(libroResumenCaro);
-      break;
-      case 12:
-          console.table(libroResumenPaginas);
-      break;
-      case 13:
-          console.table(libroCaroResumen);
-      break;
-      case 14:
-          console.table(libroResumenPaginasMayor);
-      break;
-      default:
-          console.log(" el código que ingresó no es válido")
-  }
+            break;
+        case 4:
+            
+            break;
+        case 5:
+           
+            break;
+        case 6:
+            console.log("¡Hasta luego!");
+            break;
+        default:
+            console.log("El código que ingresó no es válido.");
+    }
