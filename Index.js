@@ -353,16 +353,102 @@ let libros = [
         }
     }
 
-   
-    
+    function buscarLibroPorAutor() {
+        let nombreAutor = prompt("Inserta el nombre del autor:");
+        let librosDelAutor = libros.filter(libro => libro.autor === nombreAutor);
+        if (librosDelAutor.length > 0) {
+            console.log("Libros encontrados del autor", nombreAutor + ":");
+            librosDelAutor.forEach(libro => console.log(libro));
+        } else {
+            console.log("No se encontraron libros del autor", nombreAutor + ".");
+        }
+    }
+
+    function buscarLibroPorFecha() {
+        let añoPublicacion = prompt("Inserta el año de publicación:");
+        let librosPorFecha = libros.filter(libro => libro.fecha_publicacion === añoPublicacion);
+        if (librosPorFecha.length > 0) {
+            console.log("Libros encontrados publicados en el año", añoPublicacion + ":");
+            librosPorFecha.forEach(libro => console.log(libro));
+        } else {
+            console.log("No se encontraron libros publicados en el año", añoPublicacion + ".");
+        }
+    }
+
+    function buscarPorGenero() {
+        let nombreGenero = prompt("Ingrese el género del libro:");
+        let generoLibro = libros.filter(libro => libro.genero ===nombreGenero);
+        if (generoLibro.length > 0) {
+            console.log("Libros encontrados por género", nombreGenero + ":");
+            generoLibro.forEach(libro => console.log(libro))
+        } else {
+            console.log("No se encontraron libros por este género", nombreGenero + ":");
+        }
+    }
+
+    function buscarPorIdioma() {
+        let idiomaBuscado = prompt("Ingrese el idioma del libro:");
+        let librosPorIdioma = libros.filter(libro => libro.idioma === idiomaBuscado);
+        if (librosPorIdioma.length > 0) {
+            console.table("Libros encontrados en el idioma");
+            console.table(idiomaBuscado)
+            librosPorIdioma.forEach(libro => console.log(libro));
+        } else {
+            console.log("No se encontraron libros en el idioma", idiomaBuscado + ":");
+        }
+    }
+
+    /*incio de las 10 interaciones*/
+    /*1*/
+    let iteracion = libros.find((libros) => {
+        return libros.precio === "$24.000";
+      });
+    /*2*/
+    let iteracion2 = libros.find((libros) => {
+        return libros.isbn === "9788437601405";
+      });
+    /*3*/
+    let iteracion3 = libros.find((libros) => {
+        return libros.ubicacion === "Mundial";
+      });
+    /*4*/
+    let iteracion4 = libros.find((libros) => {
+        return libros.descripcion === "Una mujer hermosa e ingenua que roba con destreza a altos ejecutivos, un pintor habitado por fuerzas misteriosas, y un sacerdote que se enfrenta a un caso de posesión demoníaca en La Candelaria, el barrio colonial de Bogotá… historias que se tejen en torno a la de Campo Elías, héroe de la guerra de Vietnam, quien inicia su particular descenso a los infiernos obsesionado por la dualidad entre el bien y el mal, entre Jekyll y Hyde, y se convertirá en un ángel exterminador.";
+      });
+    /*5*/
+    let iteracion5 = libros.find((libros) => {
+        return libros.estado === "Nuevo";
+      });
+    /*6*/
+    let iteracion6 = libros.find((libros) => {
+        return libros.formato === "Tapa dura";
+      });
+    /*7*/
+    let iteracion7 = libros.find((libros) => {
+        return libros.editorial === "Vintage Español";
+      });
+    /*8*/
+    let iteracion8 = libros.find((libros) => {
+        return libros.peso === "550grs";
+      });
+    /*9*/
+    let iteracion9 = libros.find((libros) => {
+        return libros.dimensiones === "Ancho: 14cm - Alto: 21cm";
+      });
+    /*10*/
+    let iteracion10 = libros.find((libros) => {
+        return libros.paginas === "560";
+      });
+
     
     let msj = "BIENVENIDOS AL MENÚ DE BIBLIOTECA\n\n";
     msj += "1. Buscar un objeto del array por título.\n";
     msj += "2. Buscar un objeto del array por autor.\n";
     msj += "3. Buscar un objeto del array por fecha de publicación.\n";
     msj += "4. Buscar un objeto del array por género.\n";  
-    msj += "5. Buscar un objeto del array por idioma.\n"; 
-    msj += "6. Salir.\n"; 
+    msj += "5. Buscar un objeto del array por idioma.\n";
+    msj += "6. 10 interacciones distintas.\n";
+    msj += "7. Salir.\n"; 
     
     let codigo = parseInt(prompt(msj));
     
@@ -371,18 +457,30 @@ let libros = [
             buscarLibroPorTitulo();
             break;
         case 2:
-        
+            buscarLibroPorAutor();
             break;
         case 3:
-          
+            buscarLibroPorFecha();
             break;
         case 4:
-            
+            buscarPorGenero();
             break;
         case 5:
-           
+            buscarPorIdioma();
             break;
         case 6:
+        console.table(iteracion);
+        console.table(iteracion2);
+        console.table(iteracion3);
+        console.table(iteracion4);
+        console.table(iteracion5);
+        console.table(iteracion6);
+        console.table(iteracion7);
+        console.table(iteracion8);
+        console.table(iteracion9);
+        console.table(iteracion10);
+            break;    
+        case 7:
             console.log("¡Hasta luego!");
             break;
         default:
